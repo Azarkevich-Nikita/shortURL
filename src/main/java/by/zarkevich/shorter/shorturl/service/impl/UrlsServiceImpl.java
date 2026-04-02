@@ -1,10 +1,12 @@
 package by.zarkevich.shorter.shorturl.service.impl;
 
+import by.zarkevich.shorter.shorturl.entity.Urls;
 import by.zarkevich.shorter.shorturl.service.UrlsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import by.zarkevich.shorter.shorturl.repository.UrlsRepository;
 import by.zarkevich.shorter.shorturl.exception.shortURLException;
+import by.zarkevich.shorter.shorturl.config.Base62;
 
 @Slf4j
 @Service
@@ -30,6 +32,23 @@ public class UrlsServiceImpl implements UrlsService {
             log.error(ex.getMessage());
         }
         return full;
+    }
+
+    @Override
+    public String createURL(String url) {
+
+        Urls newUrl = new Urls();
+        newUrl.setFullUrl(url);
+
+        newUrl = urlsRepository.save(newUrl);
+
+        String shortCode = Base62.encode(newUrl.getUrlId());
+
+        newUrl.setShortCode(shortCode);
+
+        urlsRepository.save(newUrl);
+
+        return shortCode;
     }
 
 

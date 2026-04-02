@@ -2,6 +2,7 @@ package by.zarkevich.shorter.shorturl.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -13,7 +14,7 @@ public class Urls {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer urlId;
+    private long urlId;
 
     @Column(name = "short_code")
     private String shortCode;

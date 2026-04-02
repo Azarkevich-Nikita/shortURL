@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bab33eb8-b26d-46c5-a9d7-0d27d63436bf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/controller/RedirectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/controller/impl/RedirectControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/entity/Urls.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/exception/shortURLException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/repository/UrlsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/service/UrlsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/service/impl/UrlsServiceImpl.java" afterDir="false" />
+    <list default="true" id="bab33eb8-b26d-46c5-a9d7-0d27d63436bf" name="Changes" comment="Redirect was implemented to project.&#10;With Docker dataBase(postgreSQL)">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/config/Base62.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/dto/request/UrlDTORequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/dto/response/UrlDTOResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/controller/RedirectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/controller/RedirectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/controller/impl/RedirectControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/controller/impl/RedirectControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/entity/Urls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/entity/Urls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/service/UrlsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/service/UrlsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/service/impl/UrlsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/zarkevich/shorter/shorturl/service/impl/UrlsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/controller/RedirectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/controller/RedirectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/controller/impl/RedirectControllerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/controller/impl/RedirectControllerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/entity/Urls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/entity/Urls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/service/UrlsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/service/UrlsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/service/impl/UrlsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/zarkevich/shorter/shorturl/service/impl/UrlsServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +121,20 @@
       <option name="presentableId" value="Default" />
       <updated>1775019961958</updated>
     </task>
+    <task id="LOCAL-00001" summary="Redirect was implemented to project.&#10;With Docker dataBase(postgreSQL)">
+      <option name="closed" value="true" />
+      <created>1775034220312</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775034220312</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Redirect was implemented to project.&#10;With Docker dataBase(postgreSQL)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redirect was implemented to project.&#10;With Docker dataBase(postgreSQL)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,16 +1,15 @@
 package by.zarkevich.shorter.shorturl.controller.impl;
 
 import by.zarkevich.shorter.shorturl.controller.RedirectController;
-import by.zarkevich.shorter.shorturl.entity.Urls;
+import by.zarkevich.shorter.shorturl.dto.request.UrlDTORequest;
+import by.zarkevich.shorter.shorturl.dto.response.UrlDTOResponse;
 import by.zarkevich.shorter.shorturl.service.impl.UrlsServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @Slf4j
@@ -23,7 +22,7 @@ public class RedirectControllerImpl implements RedirectController {
 
     @Override
     @GetMapping("/{shortCode}")
-    public ResponseEntity<Void> getAll(@PathVariable String shortCode) {
+    public ResponseEntity<Void> redirect(@PathVariable String shortCode) {
 
         log.info("getAll was called with shortCode {" + shortCode + "}");
         String fullUrl =  urlsService.getFullURL(shortCode);
@@ -32,5 +31,16 @@ public class RedirectControllerImpl implements RedirectController {
                 .status(302)
                 .location(URI.create(fullUrl))
                 .build();
+    }
+
+    @Override
+    @PostMapping("/register")
+    public ResponseEntity<UrlDTOResponse> registerUrl(@RequestBody UrlDTORequest request) {
+
+        String shortCode = urlsService.createURL(request.getFullUrl());
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(new UrlDTOResponse(request.getFullUrl(), shortCode));
     }
 }
